@@ -145,7 +145,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private fun setResetProgressBar(){
         binding?.progressBar?.progress = restProgress
 
-        restTimer = object: CountDownTimer(1000, 1000){
+        restTimer = object: CountDownTimer(10000, 1000){
             override fun onTick(p0: Long) {
                 restProgress++
                 binding?.progressBar?.progress = 10 - restProgress
@@ -165,7 +165,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private fun setExerciseProgressBar(){
         binding?.progressBarEX?.progress = exerciseProgress
 
-        exerciseTimer = object: CountDownTimer(1000, 1000){
+        exerciseTimer = object: CountDownTimer(30000, 1000){
             override fun onTick(p0: Long) {
                 exerciseProgress++
                 binding?.progressBarEX?.progress = 30 - exerciseProgress
